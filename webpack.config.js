@@ -26,9 +26,20 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addStyleEntry('mainCss', './assets/scss/main.scss')
+    .addStyleEntry('myBurgerHomeCss', './assets/scss/myBurger_home.scss')
+    .addStyleEntry('myBurgerConnectCss', './assets/scss/myBurger_connect.scss')
+    .addStyleEntry('myBurgerAdminCss', './assets/scss/myBurger_admin.scss')
+    .addStyleEntry('backToTopButtonCss', './assets/scss/backToTopButton.scss')
+    .addStyleEntry('myLoginCss', './assets/scss/myLogin.scss')
+    .addStyleEntry('homeCss', './assets/scss/home.scss')
+    .addStyleEntry('connexionBtnCss', './assets/scss/myConnexionBtn.scss')
 
     //.addEntry('app', './assets/js/app.js')
     .addEntry('mainJs', './assets/js/mainJs.js')
+    .addEntry('myBurgerJs', './assets/js/myBurger.js')
+    .addEntry('contactJs', './assets/js/contact.js')
+    .addEntry('backToTopButtonJS', './assets/js/backToTopButton.js')
+    .addEntry('variablesCssJs', './assets/js/variablesCss.js')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 

@@ -1,0 +1,109 @@
+h1 {
+    color: #fff;
+}
+
+form {
+    width: 500px;
+    margin: 50px 100px;
+
+    .form-group {
+        position: relative;
+        margin-bottom: 65px;
+
+        input {
+            display: block;
+            width: 250px;
+            font-size: 14pt;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            background-color: #fff0;
+            color: #fff;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:focus ~ label, 
+            &:valid ~ label {
+                top: -20px;
+                font-size: 10pt;
+                color: #F80;
+            }
+
+            &:focus ~ .bar:before, 
+            &:focus ~ .bar:after {
+                width: 50%;
+            }
+
+            /* to stop bootstrap */
+            &:-internal-autofill-selected {
+                background-color: #fff0;
+                background-image: none;
+                color: #fff;
+            }
+        }
+
+        label {
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            color: #fff;
+            font-size: 14pt;
+            font-weight: 500;
+            pointer-events: none;
+            transition: all .6s ease;
+        }
+
+        .bar  {
+            display: block;
+            position: relative;
+            width: 250px;
+
+            &:before,
+            &:after {
+                content: "";
+                height: 2px;
+                width: 0;
+                bottom: 0;
+                position: absolute;
+                background: #F80;
+                transition: all .6s ease;
+            }
+
+            &:before {
+                left: 50%;
+            }
+
+            &:after {
+                right: 50%;
+            }            
+        }
+    }
+
+    button.btn.btn-lg {
+        // background-color: #f80;
+        // border: 2px solid #fff;
+        // color: #fff;
+        // outline: 2px solid #f80; 
+
+        &:hover {
+            // border: 2px solid gray;
+            // color: gray;
+        }
+
+        &:active {
+            // background-color: #ff6600;
+            // color: #fff;
+            // outline: 2px solid #f800; ne pas remettre
+        }
+
+        // &.active.focus,
+        // &.active:focus,
+        // &.focus,
+        // &:active.focus,
+        // &:active:focus, &:focus {
+        //     outline: 0
+        // }
+    }
+}

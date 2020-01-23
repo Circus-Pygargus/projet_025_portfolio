@@ -1,0 +1,85 @@
+h1 {
+  color: #fff;
+}
+
+form {
+  width: 500px;
+  margin: 50px 100px;
+}
+
+form .form-group {
+  position: relative;
+  margin-bottom: 65px;
+}
+
+form .form-group input {
+  display: block;
+  width: 250px;
+  font-size: 14pt;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: #fff0;
+  color: #fff;
+  /* to stop bootstrap */
+}
+
+form .form-group input:focus {
+  outline: none;
+}
+
+form .form-group input:focus ~ label,
+form .form-group input:valid ~ label {
+  top: -20px;
+  font-size: 10pt;
+  color: #F80;
+}
+
+form .form-group input:focus ~ .bar:before,
+form .form-group input:focus ~ .bar:after {
+  width: 50%;
+}
+
+form .form-group input:-internal-autofill-selected {
+  background-color: #fff0;
+  background-image: none;
+  color: #fff;
+}
+
+form .form-group label {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  color: #fff;
+  font-size: 14pt;
+  font-weight: 500;
+  pointer-events: none;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+form .form-group .bar {
+  display: block;
+  position: relative;
+  width: 250px;
+}
+
+form .form-group .bar:before, form .form-group .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #F80;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+form .form-group .bar:before {
+  left: 50%;
+}
+
+form .form-group .bar:after {
+  right: 50%;
+}
+/*# sourceMappingURL=myLogin.css.map */

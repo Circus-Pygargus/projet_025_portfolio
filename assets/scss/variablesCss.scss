@@ -1,0 +1,35 @@
+// This file is made to have css customizable variables in js
+
+/*----------------------------*\
+  VARIABLES
+\*----------------------------*/
+
+// here root means <html> but with a higher level
+:root {
+    --theme-color-main: #FF8800;
+    --theme-color-background: #0F101B;
+}
+
+
+
+/*----------------------------*\
+  FUNCTIONS
+\*----------------------------*/
+
+@function themeColor($color-name) {
+  @return var(--theme-color-#{$color-name});
+}
+  
+// Now I can call my color in scss
+// h1 { 
+//   color: themeColor(main); 
+// }
+  
+// the render in compiled css :  
+// body { 
+//   color: var(--theme-color-main); 
+// }
+
+// I can even change this css variable in js :
+// let root = document.documentElement;
+// root.style.setProperty('--theme-color-main', "#FFF000");

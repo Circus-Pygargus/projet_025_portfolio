@@ -1,0 +1,34 @@
+#my-connextion-btn {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+
+#my-connextion-btn a svg {
+  width: 30px;
+  height: 30px;
+}
+
+#my-connextion-btn a svg g circle, #my-connextion-btn a svg g path {
+  stroke: #F8F9FA;
+  -webkit-transition: stroke .8s;
+  transition: stroke .8s;
+}
+
+#my-connextion-btn:hover a svg g circle, #my-connextion-btn:hover a svg g path {
+  stroke: #FF8800;
+  -webkit-transition: stroke .8s;
+  transition: stroke .8s;
+}
+
+#my-connextion-btn:active a svg g circle, #my-connextion-btn:active a svg g path {
+  fill: #FF8800;
+}
+
+@media screen and (max-width: 1024px) {
+  #my-connextion-btn {
+    display: none;
+  }
+}
+/*# sourceMappingURL=myConnexionBtn.css.map */

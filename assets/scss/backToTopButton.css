@@ -1,0 +1,43 @@
+body #backToTopButton {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 57px;
+  z-index: 99;
+  font-size: 64px;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: #757575;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  -webkit-transition: -webkit-box-shadow .8s;
+  transition: -webkit-box-shadow .8s;
+  transition: box-shadow .8s;
+  transition: box-shadow .8s, -webkit-box-shadow .8s;
+}
+
+body #backToTopButton:hover {
+  -webkit-box-shadow: 0px 0px 10px #757575;
+          box-shadow: 0px 0px 10px #757575;
+  -webkit-transition: -webkit-box-shadow .8s;
+  transition: -webkit-box-shadow .8s;
+  transition: box-shadow .8s;
+  transition: box-shadow .8s, -webkit-box-shadow .8s;
+}
+
+body #backToTopButton:active {
+  -webkit-box-shadow: 0px 0px 10px #ff8800;
+          box-shadow: 0px 0px 10px #ff8800;
+  color: #ff8800;
+}
+
+body #backToTopButton span {
+  position: absolute;
+  top: -6px;
+  left: 17px;
+}
+/*# sourceMappingURL=backToTopButton.css.map */

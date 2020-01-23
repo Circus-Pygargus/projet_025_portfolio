@@ -1,0 +1,196 @@
+/*
+#my-burger {
+color: #ff8800;
+}
+#my-burger.my-burger-is-active {
+color: green;
+}
+*/
+
+// Variables
+$backgroundColor: rgba(255, 255, 255, 0); // invisible
+$burgerColor: rgba(255, 255, 255, 1);
+$activeColor: rgba(255, 128, 0, 1);
+$burgerAnimDuration: .8s;
+$btnWidth: 6rem;
+$btnWeight: 6rem;
+$barWidth: 2.3rem;
+$barHeight: .23rem;
+$posTop: 1rem;
+$posRight: 1rem;
+
+@mixin my-burger-btn() {
+    position: relative;
+    float: right;
+    width: $btnWidth;
+    height: $btnWeight;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $backgroundColor;
+    /*
+    background-image: linear-gradient(
+        0deg, 
+        rgba(0,0,0,0.02) 0%, 
+        rgba(0,0,0,0.02) 50%, 
+        rgba(161,57,240,1) 50%, 
+        rgba(220,52,245,1) 75%, 
+        rgba(161,57,240,1) 100%);
+    background-size: 100% 200%;
+    background-position: 0% 100%;
+    */
+    color: #fff;
+    transition: $burgerAnimDuration;
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, .04);
+
+    &:hover {
+        box-shadow: 0px 0px 10px $burgerColor;
+    }
+}
+
+@mixin my-burger-bar() {
+    position: absolute;
+    width: $barWidth;
+    height: $barHeight;
+    border-radius: 2px;
+    background-color: $burgerColor;
+    display: block;
+    margin: auto;
+    transition: $burgerAnimDuration;
+}
+
+// animations
+@keyframes activatesMyBurgerTopBar {
+    0% { transform: rotate(0deg) translateY(-10px); }
+    100% { 
+            transform: rotate(405deg) translateY(0px);
+            background-color: $activeColor; 
+        }
+}
+@keyframes activatesMyBurgerBottomBar {
+    0% { transform: rotate(0deg) translateY(10px); }
+    100% { 
+            transform: rotate(-225deg) translateY(0px);
+            background-color: $activeColor; 
+        }
+}
+@keyframes desactivatesMyBurgerTopBar {
+    0% { transform: rotate(405deg) translateY(0px); }
+    100% { transform: rotate(0deg) translateY(-10px); }
+}
+@keyframes desactivatesMyBurgerBottomBar {
+    0% { transform: rotate(-225deg) translateY(0px); }
+    100% { transform: rotate(0deg) translateY(10px); }
+}
+
+
+// ok let's go
+#my-burger {
+    position: relative;
+    float: right;
+}
+#my-burger-btn-div {
+    position: absolute;
+    top: $posTop;
+    right: $posRight;
+    z-index: 2;
+}
+#my-burger-btn {
+    @include my-burger-btn();
+    //transform: rotate(0deg);
+    opacity: 1;
+}
+// build the three bars
+#my-burger-bar {
+    @include my-burger-bar();
+    &:before {
+        @include my-burger-bar();
+        content: '';
+        backface-visibility: hidden;
+        transform: translateY(10px);
+    }
+    &:after {
+        @include my-burger-bar();
+        content: '';
+        backface-visibility: hidden;
+        transform: translateY(-10px);
+    }
+}
+// the burger nav bar
+#my-burger-nav-bar {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    // float: right;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, .4);
+    transition: $burgerAnimDuration;
+}
+
+// burger becomes active
+#my-burger-btn.my-burger-is-active {
+    // right: 3rem;
+    // transition: $burgerAnimDuration;
+    &:hover {
+        box-shadow: 0px 0px 10px $activeColor;
+    }
+}
+// #my-burger-btn.my-burger-is-active:hover {
+//     box-shadow: 0px 0px 10px rgba(255, 128, 0, 1);
+// }
+#my-burger-btn.my-burger-is-active #my-burger-bar {
+    background-color: $backgroundColor;
+    &:before {
+      /*  @include my-burger-bar();
+        content: '';*/
+        //transform: rotate(45deg) translateY(0px);
+        animation-name: activatesMyBurgerTopBar;
+        animation-duration: $burgerAnimDuration;
+        // this line forces éléments to keep their state at the end of animation
+        animation-fill-mode: forwards;
+    }
+    &:after {
+     /*   @include my-burger-bar();
+        content: '';*/
+        //transform: rotate(-45deg) translateY(0px);
+        animation-name: activatesMyBurgerBottomBar;
+        animation-duration: $burgerAnimDuration;
+        // this line forces éléments to keep their state at the end of animation
+        animation-fill-mode: forwards;
+    }
+}
+// the nav shows up
+#my-burger-nav-bar.my-burger-nav-bar-is-active {
+    width: 12rem;
+    height: 500px;
+    // right: 200px;
+    transition: $burgerAnimDuration;
+}
+
+// burger becomes inactive
+#my-burger-btn.my-burger-is-inactive #my-burger-bar {
+    background-color: $backgroundColor;
+    @include my-burger-bar();
+    &:before {
+     /*   @include my-burger-bar();
+        content: '';*/
+        animation-name: desactivatesMyBurgerTopBar;
+        animation-duration: $burgerAnimDuration;
+        animation-fill-mode: forwards;
+       // animation-direction: reverse;
+    }
+    &:after {
+     /*   @include my-burger-bar();
+        content: '';*/
+        animation-name: desactivatesMyBurgerBottomBar;
+        animation-duration: $burgerAnimDuration;
+        animation-fill-mode: forwards;
+       // animation-direction: reverse;
+    }
+}

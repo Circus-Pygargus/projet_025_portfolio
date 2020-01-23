@@ -1,0 +1,109 @@
+body {
+    main {
+        section#home {
+            position: relative;
+            width: 100%;
+            background-image: url('/build/img/castelmezzano.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            div.container {
+                div.row {
+                    div { 
+                        height: 100vh;
+                        
+                        h1, h2 {
+                            color: #fff;
+                            font-size: 5.5rem;
+                            font-weight: 300;
+                            line-height: 1.2;
+
+                            @media screen and (max-width: 770px) {
+                                font-size: 4rem;
+                            }
+
+                            @media screen and (max-width: 550px) {
+                                font-size: 3rem;
+                            }
+
+                            @media screen and (max-width: 430px) {
+                                font-size: 2.5rem;
+                            }
+
+                            @media screen and (max-width: 370px) {
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section#about {
+
+            .container {
+
+                .row {
+                    font-size: 3.5rem;
+                    font-weight: 300;
+                    line-height: 1.2;
+
+                    @media screen and (max-width: 991px) {
+                        font-size: 2.5rem;
+                    }
+                    @media screen and (max-width: 768px) {
+                        font-size: 2.5rem;
+                    }
+                    @media screen and (max-width: 576px) {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        section#projects {
+            div {
+                div.row {
+                    div.card-deck {
+                        // card
+                        div {
+                            div.card {
+                                cursor: pointer;
+
+                                &:hover {
+                                    border-color: #ff8800 !important;
+                                }
+
+                                &:active p.card-text {
+                                    color: #FF8800 !important;
+                                }
+                            }
+                        }
+                        // modal
+                        div.modal {
+                            div.modal-dialog {
+                                div.modal-content {
+                                    div.modal-footer {
+                                        a {
+                                            &:hover {
+                                                color: #FF8800 !important;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// for the span error in contact form
+.labelError,
+.label-error {
+    padding-left: 30px;
+    color:red;
+}

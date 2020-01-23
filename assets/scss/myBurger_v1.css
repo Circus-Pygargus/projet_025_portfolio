@@ -1,0 +1,285 @@
+/*
+#my-burger {
+color: #ff8800;
+}
+#my-burger.my-burger-is-active {
+color: green;
+}
+*/
+@-webkit-keyframes activatesMyBurgerTopBar {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(-10px);
+            transform: rotate(0deg) translateY(-10px);
+  }
+  100% {
+    -webkit-transform: rotate(405deg) translateY(0px);
+            transform: rotate(405deg) translateY(0px);
+    background-color: #ff8000;
+  }
+}
+@keyframes activatesMyBurgerTopBar {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(-10px);
+            transform: rotate(0deg) translateY(-10px);
+  }
+  100% {
+    -webkit-transform: rotate(405deg) translateY(0px);
+            transform: rotate(405deg) translateY(0px);
+    background-color: #ff8000;
+  }
+}
+
+@-webkit-keyframes activatesMyBurgerBottomBar {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(10px);
+            transform: rotate(0deg) translateY(10px);
+  }
+  100% {
+    -webkit-transform: rotate(-225deg) translateY(0px);
+            transform: rotate(-225deg) translateY(0px);
+    background-color: #ff8000;
+  }
+}
+
+@keyframes activatesMyBurgerBottomBar {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(10px);
+            transform: rotate(0deg) translateY(10px);
+  }
+  100% {
+    -webkit-transform: rotate(-225deg) translateY(0px);
+            transform: rotate(-225deg) translateY(0px);
+    background-color: #ff8000;
+  }
+}
+
+@-webkit-keyframes desactivatesMyBurgerTopBar {
+  0% {
+    -webkit-transform: rotate(405deg) translateY(0px);
+            transform: rotate(405deg) translateY(0px);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(-10px);
+            transform: rotate(0deg) translateY(-10px);
+  }
+}
+
+@keyframes desactivatesMyBurgerTopBar {
+  0% {
+    -webkit-transform: rotate(405deg) translateY(0px);
+            transform: rotate(405deg) translateY(0px);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(-10px);
+            transform: rotate(0deg) translateY(-10px);
+  }
+}
+
+@-webkit-keyframes desactivatesMyBurgerBottomBar {
+  0% {
+    -webkit-transform: rotate(-225deg) translateY(0px);
+            transform: rotate(-225deg) translateY(0px);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(10px);
+            transform: rotate(0deg) translateY(10px);
+  }
+}
+
+@keyframes desactivatesMyBurgerBottomBar {
+  0% {
+    -webkit-transform: rotate(-225deg) translateY(0px);
+            transform: rotate(-225deg) translateY(0px);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(10px);
+            transform: rotate(0deg) translateY(10px);
+  }
+}
+
+#my-burger {
+  position: relative;
+  float: right;
+}
+
+#my-burger-btn-div {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+}
+
+#my-burger-btn {
+  position: relative;
+  float: right;
+  width: 6rem;
+  height: 6rem;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  /*
+    background-image: linear-gradient(
+        0deg, 
+        rgba(0,0,0,0.02) 0%, 
+        rgba(0,0,0,0.02) 50%, 
+        rgba(161,57,240,1) 50%, 
+        rgba(220,52,245,1) 75%, 
+        rgba(161,57,240,1) 100%);
+    background-size: 100% 200%;
+    background-position: 0% 100%;
+    */
+  color: #fff;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.04);
+          box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.04);
+  opacity: 1;
+}
+
+#my-burger-btn:hover {
+  -webkit-box-shadow: 0px 0px 10px white;
+          box-shadow: 0px 0px 10px white;
+}
+
+#my-burger-bar {
+  position: absolute;
+  width: 2.3rem;
+  height: 0.23rem;
+  border-radius: 2px;
+  background-color: white;
+  display: block;
+  margin: auto;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+#my-burger-bar:before {
+  position: absolute;
+  width: 2.3rem;
+  height: 0.23rem;
+  border-radius: 2px;
+  background-color: white;
+  display: block;
+  margin: auto;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  content: '';
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+#my-burger-bar:after {
+  position: absolute;
+  width: 2.3rem;
+  height: 0.23rem;
+  border-radius: 2px;
+  background-color: white;
+  display: block;
+  margin: auto;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  content: '';
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+#my-burger-nav-bar {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+#my-burger-btn.my-burger-is-active:hover {
+  -webkit-box-shadow: 0px 0px 10px #ff8000;
+          box-shadow: 0px 0px 10px #ff8000;
+}
+
+#my-burger-btn.my-burger-is-active #my-burger-bar {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#my-burger-btn.my-burger-is-active #my-burger-bar:before {
+  /*  @include my-burger-bar();
+        content: '';*/
+  -webkit-animation-name: activatesMyBurgerTopBar;
+          animation-name: activatesMyBurgerTopBar;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#my-burger-btn.my-burger-is-active #my-burger-bar:after {
+  /*   @include my-burger-bar();
+        content: '';*/
+  -webkit-animation-name: activatesMyBurgerBottomBar;
+          animation-name: activatesMyBurgerBottomBar;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#my-burger-nav-bar.my-burger-nav-bar-is-active {
+  width: 12rem;
+  height: 500px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+#my-burger-btn.my-burger-is-inactive #my-burger-bar {
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  width: 2.3rem;
+  height: 0.23rem;
+  border-radius: 2px;
+  background-color: white;
+  display: block;
+  margin: auto;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+#my-burger-btn.my-burger-is-inactive #my-burger-bar:before {
+  /*   @include my-burger-bar();
+        content: '';*/
+  -webkit-animation-name: desactivatesMyBurgerTopBar;
+          animation-name: desactivatesMyBurgerTopBar;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#my-burger-btn.my-burger-is-inactive #my-burger-bar:after {
+  /*   @include my-burger-bar();
+        content: '';*/
+  -webkit-animation-name: desactivatesMyBurgerBottomBar;
+          animation-name: desactivatesMyBurgerBottomBar;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+/*# sourceMappingURL=myBurger_v1.css.map */

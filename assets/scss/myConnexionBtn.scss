@@ -1,0 +1,57 @@
+#my-connextion-btn {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+
+    a {
+        svg {
+            width: 30px;
+            height: 30px;
+            g {
+                circle, path {
+                    stroke: #F8F9FA;
+                    transition: stroke .8s;
+                }
+            }
+
+            // &:hover {
+            //     g {
+            //         circle, path {
+            //             stroke: #FF8800;
+            //             transition: stroke .8s;
+            //         }
+            //     }
+            // }
+        }
+    }
+
+    &:hover {
+        a {
+            svg {
+                g {
+                    circle, path {
+                        stroke: #FF8800;
+                        transition: stroke .8s;
+                    }
+                }
+            }
+        }
+    }
+
+    &:active {
+        a {
+            svg{
+                g{
+                    circle, path {
+                        fill: #FF8800;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and  (max-width: 1024px) {
+        display: none;
+    }
+}

@@ -1,0 +1,561 @@
+@-webkit-keyframes activatesMyBurgerTopBar {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(-10px);
+            transform: rotate(0deg) translateY(-10px);
+  }
+  100% {
+    -webkit-transform: rotate(405deg) translateY(0px);
+            transform: rotate(405deg) translateY(0px);
+    background-color: #ff8000;
+  }
+}
+
+@keyframes activatesMyBurgerTopBar {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(-10px);
+            transform: rotate(0deg) translateY(-10px);
+  }
+  100% {
+    -webkit-transform: rotate(405deg) translateY(0px);
+            transform: rotate(405deg) translateY(0px);
+    background-color: #ff8000;
+  }
+}
+
+@-webkit-keyframes activatesMyBurgerBottomBar {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(10px);
+            transform: rotate(0deg) translateY(10px);
+  }
+  100% {
+    -webkit-transform: rotate(-225deg) translateY(0px);
+            transform: rotate(-225deg) translateY(0px);
+    background-color: #ff8000;
+  }
+}
+
+@keyframes activatesMyBurgerBottomBar {
+  0% {
+    -webkit-transform: rotate(0deg) translateY(10px);
+            transform: rotate(0deg) translateY(10px);
+  }
+  100% {
+    -webkit-transform: rotate(-225deg) translateY(0px);
+            transform: rotate(-225deg) translateY(0px);
+    background-color: #ff8000;
+  }
+}
+
+@-webkit-keyframes activatesMyBurgerMiddleBar {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes activatesMyBurgerMiddleBar {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+@-webkit-keyframes desactivatesMyBurgerTopBar {
+  0% {
+    -webkit-transform: rotate(405deg) translateY(0px);
+            transform: rotate(405deg) translateY(0px);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(-10px);
+            transform: rotate(0deg) translateY(-10px);
+  }
+}
+
+@keyframes desactivatesMyBurgerTopBar {
+  0% {
+    -webkit-transform: rotate(405deg) translateY(0px);
+            transform: rotate(405deg) translateY(0px);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(-10px);
+            transform: rotate(0deg) translateY(-10px);
+  }
+}
+
+@-webkit-keyframes desactivatesMyBurgerBottomBar {
+  0% {
+    -webkit-transform: rotate(-225deg) translateY(0px);
+            transform: rotate(-225deg) translateY(0px);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(10px);
+            transform: rotate(0deg) translateY(10px);
+  }
+}
+
+@keyframes desactivatesMyBurgerBottomBar {
+  0% {
+    -webkit-transform: rotate(-225deg) translateY(0px);
+            transform: rotate(-225deg) translateY(0px);
+  }
+  100% {
+    -webkit-transform: rotate(0deg) translateY(10px);
+            transform: rotate(0deg) translateY(10px);
+  }
+}
+
+@-webkit-keyframes activatesMyBurgerNavbar {
+  20% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  50% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem) - calc(2rem))) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem) - calc(2rem))) rotate(0deg);
+    width: 150px;
+  }
+  60% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+    width: 150px;
+  }
+  70% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+    width: 150px;
+    height: 0;
+    border-width: 0.23rem;
+    padding: 0;
+  }
+  100% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(1rem + 3rem + 2rem)) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(1rem + 3rem + 2rem)) rotate(0deg);
+    width: 150px;
+    height: 300px;
+    border-width: 0;
+    padding: 27px 19px;
+  }
+}
+
+@keyframes activatesMyBurgerNavbar {
+  20% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  50% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem) - calc(2rem))) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem) - calc(2rem))) rotate(0deg);
+    width: 150px;
+  }
+  60% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+    width: 150px;
+  }
+  70% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+    width: 150px;
+    height: 0;
+    border-width: 0.23rem;
+    padding: 0;
+  }
+  100% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(1rem + 3rem + 2rem)) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(1rem + 3rem + 2rem)) rotate(0deg);
+    width: 150px;
+    height: 300px;
+    border-width: 0;
+    padding: 27px 19px;
+  }
+}
+
+@-webkit-keyframes desactivatesMyBurgerNavbar {
+  0% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(1rem + 3rem + 2rem)) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(1rem + 3rem + 2rem)) rotate(0deg);
+    width: 150px;
+    height: 300px;
+    border-width: 0;
+    padding: 27px 19px;
+  }
+  30% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+    width: 150px;
+    height: 0;
+    border-width: 0.23rem;
+    padding: 0;
+  }
+  40% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+    width: 150px;
+    height: 0;
+    border-color: white;
+  }
+  50% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem) - calc(2rem))) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem) - calc(2rem))) rotate(0deg);
+    width: 150px;
+  }
+  80% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+  }
+}
+
+@keyframes desactivatesMyBurgerNavbar {
+  0% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(1rem + 3rem + 2rem)) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(1rem + 3rem + 2rem)) rotate(0deg);
+    width: 150px;
+    height: 300px;
+    border-width: 0;
+    padding: 27px 19px;
+  }
+  30% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+    width: 150px;
+    height: 0;
+    border-width: 0.23rem;
+    padding: 0;
+  }
+  40% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem))) rotate(0deg);
+    width: 150px;
+    height: 0;
+    border-color: white;
+  }
+  50% {
+    -webkit-transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem) - calc(2rem))) rotate(0deg);
+            transform: translateX(calc(1.15rem)) translateY(calc(calc(1rem + 3rem + 2rem) - calc(2rem))) rotate(0deg);
+    width: 150px;
+  }
+  80% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+  }
+}
+
+#my-burger {
+  position: relative;
+  float: right;
+}
+
+#my-burger-btn-div {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+}
+
+#my-burger-btn {
+  position: relative;
+  float: right;
+  width: 6rem;
+  height: 6rem;
+  font-size: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  /*
+    background-image: linear-gradient(
+        0deg, 
+        rgba(0,0,0,0.02) 0%, 
+        rgba(0,0,0,0.02) 50%, 
+        rgba(161,57,240,1) 50%, 
+        rgba(220,52,245,1) 75%, 
+        rgba(161,57,240,1) 100%);
+    background-size: 100% 200%;
+    background-position: 0% 100%;
+    */
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.04);
+          box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.04);
+  opacity: 1;
+}
+
+#my-burger-btn:hover {
+  -webkit-box-shadow: 0px 0px 10px white;
+          box-shadow: 0px 0px 10px white;
+}
+
+#my-burger-bar {
+  position: absolute;
+  width: 2.3rem;
+  height: 0.23rem;
+  border-radius: 2px;
+  background-color: white;
+  display: block;
+  margin: auto;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#my-burger-bar:before {
+  position: absolute;
+  width: 2.3rem;
+  height: 0.23rem;
+  border-radius: 2px;
+  background-color: white;
+  display: block;
+  margin: auto;
+  -webkit-transition: 1s;
+  transition: 1s;
+  content: '';
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+#my-burger-bar:after {
+  position: absolute;
+  width: 2.3rem;
+  height: 0.23rem;
+  border-radius: 2px;
+  background-color: white;
+  display: block;
+  margin: auto;
+  -webkit-transition: 1s;
+  transition: 1s;
+  content: '';
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+#my-burger-navbar {
+  position: absolute;
+  z-index: 1;
+  top: calc(1rem + 3rem - 0.115rem);
+  right: calc(1rem + 3rem - 1.15rem);
+  width: 2.3rem;
+  height: 0;
+  border-top: solid white 0.23rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.712);
+  -webkit-transition: calc(4.5s);
+  transition: calc(4.5s);
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+
+#my-burger-navbar .my-burger-navbar-item {
+  text-align: right;
+}
+
+#my-burger-navbar .my-burger-navbar-item a {
+  display: inline-block;
+  visibility: hidden;
+  text-decoration: none;
+  color: #0f101b;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+#my-burger-navbar .my-burger-navbar-item a .my-underline {
+  display: block;
+  border-top: 2px solid #0f101b;
+  width: 0;
+  -webkit-transition: width ease-in-out .4s;
+  transition: width ease-in-out .4s;
+}
+
+#my-burger-navbar .my-burger-navbar-item a:hover .my-underline {
+  width: 100%;
+}
+
+#my-burger-btn.my-burger-is-active:hover {
+  -webkit-box-shadow: 0px 0px 10px #ff8000;
+          box-shadow: 0px 0px 10px #ff8000;
+}
+
+#my-burger-btn.my-burger-is-active #my-burger-bar {
+  -webkit-animation-name: activatesMyBurgerMiddleBar;
+          animation-name: activatesMyBurgerMiddleBar;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#my-burger-btn.my-burger-is-active #my-burger-bar:before {
+  -webkit-animation-name: activatesMyBurgerTopBar;
+          animation-name: activatesMyBurgerTopBar;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#my-burger-btn.my-burger-is-active #my-burger-bar:after {
+  -webkit-animation-name: activatesMyBurgerBottomBar;
+          animation-name: activatesMyBurgerBottomBar;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#my-burger-navbar.my-burger-navbar-is-active {
+  -webkit-animation-name: activatesMyBurgerNavbar;
+          animation-name: activatesMyBurgerNavbar;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#my-burger-navbar.my-burger-navbar-is-active .my-burger-navbar-item:nth-child(1) a {
+  visibility: visible;
+  -webkit-transition: visibility calc(calc(4.5s)/20);
+  transition: visibility calc(calc(4.5s)/20);
+  -webkit-transition-delay: calc( calc(4.5s)/6 + ( ( calc(4.5s)/17 ) * ( 0 ) / 3 ));
+          transition-delay: calc( calc(4.5s)/6 + ( ( calc(4.5s)/17 ) * ( 0 ) / 3 ));
+}
+
+#my-burger-navbar.my-burger-navbar-is-active .my-burger-navbar-item:nth-child(2) a {
+  visibility: visible;
+  -webkit-transition: visibility calc(calc(4.5s)/20);
+  transition: visibility calc(calc(4.5s)/20);
+  -webkit-transition-delay: calc( calc(4.5s)/6 + ( ( calc(4.5s)/17 ) * ( 1 ) / 3 ));
+          transition-delay: calc( calc(4.5s)/6 + ( ( calc(4.5s)/17 ) * ( 1 ) / 3 ));
+}
+
+#my-burger-navbar.my-burger-navbar-is-active .my-burger-navbar-item:nth-child(3) a {
+  visibility: visible;
+  -webkit-transition: visibility calc(calc(4.5s)/20);
+  transition: visibility calc(calc(4.5s)/20);
+  -webkit-transition-delay: calc( calc(4.5s)/6 + ( ( calc(4.5s)/17 ) * ( 2 ) / 3 ));
+          transition-delay: calc( calc(4.5s)/6 + ( ( calc(4.5s)/17 ) * ( 2 ) / 3 ));
+}
+
+#my-burger-navbar.my-burger-navbar-is-active .my-burger-navbar-item:nth-child(4) a {
+  visibility: visible;
+  -webkit-transition: visibility calc(calc(4.5s)/20);
+  transition: visibility calc(calc(4.5s)/20);
+  -webkit-transition-delay: calc( calc(4.5s)/6 + ( ( calc(4.5s)/17 ) * ( 3 ) / 3 ));
+          transition-delay: calc( calc(4.5s)/6 + ( ( calc(4.5s)/17 ) * ( 3 ) / 3 ));
+}
+
+#my-burger-navbar.my-burger-navbar-is-active .my-burger-navbar-item:nth-child(5) a {
+  visibility: visible;
+  -webkit-transition: visibility calc(calc(4.5s)/20);
+  transition: visibility calc(calc(4.5s)/20);
+  -webkit-transition-delay: calc( calc(4.5s)/6 + ( ( calc(4.5s)/17 ) * ( 4 ) / 3 ));
+          transition-delay: calc( calc(4.5s)/6 + ( ( calc(4.5s)/17 ) * ( 4 ) / 3 ));
+}
+
+#my-burger-btn.my-burger-is-inactive #my-burger-bar {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#my-burger-btn.my-burger-is-inactive #my-burger-bar:before {
+  -webkit-animation-name: desactivatesMyBurgerTopBar;
+          animation-name: desactivatesMyBurgerTopBar;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#my-burger-btn.my-burger-is-inactive #my-burger-bar:after {
+  -webkit-animation-name: desactivatesMyBurgerBottomBar;
+          animation-name: desactivatesMyBurgerBottomBar;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#my-burger-navbar.my-burger-navbar-is-inactive {
+  -webkit-animation-name: desactivatesMyBurgerNavbar;
+          animation-name: desactivatesMyBurgerNavbar;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#my-burger-navbar.my-burger-navbar-is-inactive .my-burger-navbar-item:nth-child(5) a {
+  visibility: hidden;
+  -webkit-transition: visibility calc(calc(4.5s) / 3);
+  transition: visibility calc(calc(4.5s) / 3);
+  -webkit-transition-delay: calc( (calc(4.5s) / 17) * (5 - 1));
+          transition-delay: calc( (calc(4.5s) / 17) * (5 - 1));
+}
+
+#my-burger-navbar.my-burger-navbar-is-inactive .my-burger-navbar-item:nth-child(4) a {
+  visibility: hidden;
+  -webkit-transition: visibility calc(calc(4.5s) / 3);
+  transition: visibility calc(calc(4.5s) / 3);
+  -webkit-transition-delay: calc( (calc(4.5s) / 17) * (4 - 1));
+          transition-delay: calc( (calc(4.5s) / 17) * (4 - 1));
+}
+
+#my-burger-navbar.my-burger-navbar-is-inactive .my-burger-navbar-item:nth-child(3) a {
+  visibility: hidden;
+  -webkit-transition: visibility calc(calc(4.5s) / 3);
+  transition: visibility calc(calc(4.5s) / 3);
+  -webkit-transition-delay: calc( (calc(4.5s) / 17) * (3 - 1));
+          transition-delay: calc( (calc(4.5s) / 17) * (3 - 1));
+}
+
+#my-burger-navbar.my-burger-navbar-is-inactive .my-burger-navbar-item:nth-child(2) a {
+  visibility: hidden;
+  -webkit-transition: visibility calc(calc(4.5s) / 3);
+  transition: visibility calc(calc(4.5s) / 3);
+  -webkit-transition-delay: calc( (calc(4.5s) / 17) * (2 - 1));
+          transition-delay: calc( (calc(4.5s) / 17) * (2 - 1));
+}
+
+#my-burger-navbar.my-burger-navbar-is-inactive .my-burger-navbar-item:nth-child(1) a {
+  visibility: hidden;
+  -webkit-transition: visibility calc(calc(4.5s) / 3);
+  transition: visibility calc(calc(4.5s) / 3);
+  -webkit-transition-delay: calc( (calc(4.5s) / 17) * (1 - 1));
+          transition-delay: calc( (calc(4.5s) / 17) * (1 - 1));
+}
+/*# sourceMappingURL=myBurger_admin.css.map */

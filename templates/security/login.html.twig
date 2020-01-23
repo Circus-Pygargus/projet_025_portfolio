@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Log in!{% endblock %}
+
+
+
+{% block css %}
+    {{ encore_entry_link_tags('myBurgerConnectCss')}}
+    {{ encore_entry_link_tags('myLoginCss') }}
+{% endblock %}
+
+
+
+{% block navbarContent %}
+<div class="my-burger-navbar-item">
+    <a href="{{ path('app_home')}}">Accueil<span class="my-underline"></span></a>
+</div>
+{% endblock %}
+
+
+
+{% block body %}
+
+<main class="container-fluid">
+    <div class="conatiner">
+        <div class="row">
+            <div class="d-flex justify-content-center col-12">
+                <h1 class="h1 my-5 font-weight-normal">Se connecter</h1>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-sm-center">            
+            <div class="col-xs-10 col-sm-10 col-md-8 col-lg-6 col-xl-4 border border-secondary rounded rounded-lg p-4">
+                <form method="post">
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+                
+                    {% if app.user %}
+                        <div class="checkbox mb-3">Bienvenue {{ app.user.username }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
+                    {% endif %}
+                    <div class="form-group">
+                        <input type="text" name="username" id="inputUsername" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label for="inputUsername">Pseudo</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="inputPassword" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label for="inputPassword">Mot de passe</label>
+                    </div>
+                    {% if csrf_token('authenticate') %}
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                    <!-- <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" /> -->
+                    {% endif %}
+                
+                    {#
+                        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                        See https://symfony.com/doc/current/security/remember_me.html
+                
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" name="_remember_me"> Remember me
+                            </label>
+                        </div>
+                    #}
+                
+                    <button class="btn btn-lg btn-primary" type="submit" aria-pressed="true">
+                        Envoyer
+                    </button>
+                </form>
+            </div> 
+        </div>
+    </div>
+</main>
+
+
+
+{% endblock %}

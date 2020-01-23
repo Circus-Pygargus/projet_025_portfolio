@@ -1,0 +1,41 @@
+body {
+    #backToTopButton {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        right: 57px;
+        z-index: 99;
+        font-size: 64px;
+        border: none;
+        outline: none;
+        // background-color: #8c8c8c;
+        background-color: rgba(0, 0, 0, 0);
+        color: #757575;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+        transition: box-shadow .8s;
+
+        &:hover {
+            box-shadow: 0px 0px 10px #757575;
+            transition: box-shadow .8s;
+        }
+
+        &:active {
+            box-shadow: 0px 0px 10px #ff8800;
+            color: #ff8800;
+        }
+
+        span {
+            position: absolute;
+            top: -6px;
+            left: 17px;
+        }
+      }
+    //   #backToTopButton:hover {
+    //     //   background-color: #e6e6e6;
+    //       color: #8c8c8c; 
+    //   }
+}

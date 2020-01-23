@@ -1,0 +1,346 @@
+// VARIABLES
+
+// burger
+$vioKBurger_BackgroundColor: rgba(255, 255, 255, 0); // invisible
+$vioKBurger_BurgerColor: rgba(255, 255, 255, 1);
+$vioKBurger_ActiveColor: rgba(255, 128, 0, 1);
+$vioKBurger_BurgerAnimDuration: 1s;
+$vioKBurger_BtnWidth: 6rem;
+$vioKBurger_BtnHeight: 6rem;
+$vioKBurger_BarWidth: 2.3rem;
+$vioKBurger_BarHeight: .23rem;
+$vioKBurger_PosTop: 1rem;
+$vioKBurger_PosRight: 1rem;
+
+// nav bar
+$viokNavbar_BackgroundColor: rgba(255, 255, 255, 0.712);
+$viokNavbar_AnimDuration: calc(#{$vioKBurger_BurgerAnimDuration * 4.5});
+$viokNavbar_width: 200px;
+$viokNavbar_height: 300px;
+$viokNavbar_posTop: calc(#{$vioKBurger_PosTop} + #{$vioKBurger_BtnWidth / 2} + #{$vioKBurger_PosTop * 2});
+$viokNavbar_ShakeAmplitude: calc(#{$vioKBurger_PosTop * 2});
+$viokNavbar_Padding : 10px 0;
+$viokNavbar_LinksMargin: 10px 0;
+$viokNavbar_FontSize: 1.4rem;
+$viokNavbar_FontWeight: 700;
+$viokNavbar_Color: #0f101b;
+
+// mixins
+@mixin my-burger-btn() {
+    position: relative;
+    float: right;
+    width: $vioKBurger_BtnWidth;
+    height: $vioKBurger_BtnHeight;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $vioKBurger_BackgroundColor;
+    /*
+    background-image: linear-gradient(
+        0deg, 
+        rgba(0,0,0,0.02) 0%, 
+        rgba(0,0,0,0.02) 50%, 
+        rgba(161,57,240,1) 50%, 
+        rgba(220,52,245,1) 75%, 
+        rgba(161,57,240,1) 100%);
+    background-size: 100% 200%;
+    background-position: 0% 100%;
+    */
+    color: $vioKBurger_BurgerColor;
+    transition: $vioKBurger_BurgerAnimDuration;
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, .04);
+
+    &:hover {
+        box-shadow: 0px 0px 10px $vioKBurger_BurgerColor;
+    }
+}
+
+@mixin my-burger-bar() {
+    position: absolute;
+    width: $vioKBurger_BarWidth;
+    height: $vioKBurger_BarHeight;
+    border-radius: 2px;
+    background-color: $vioKBurger_BurgerColor;
+    display: block;
+    margin: auto;
+    transition: $vioKBurger_BurgerAnimDuration;
+}
+
+// ANIMATIONS
+// burger
+@keyframes activatesMyBurgerTopBar {
+    0% { transform: rotate(0deg) translateY(-10px); }
+    100% { 
+            transform: rotate(405deg) translateY(0px);
+            background-color: $vioKBurger_ActiveColor; 
+        }
+}
+@keyframes activatesMyBurgerBottomBar {
+    0% { transform: rotate(0deg) translateY(10px); }
+    100% { 
+            transform: rotate(-225deg) translateY(0px);
+            background-color: $vioKBurger_ActiveColor; 
+        }
+}
+@keyframes activatesMyBurgerMiddleBar {
+    0% { background-color: $vioKBurger_BurgerColor; }
+    50% { background-color: $vioKBurger_BackgroundColor; }
+    100% { background-color: $vioKBurger_BackgroundColor; }
+}
+@keyframes desactivatesMyBurgerTopBar {
+    0% { transform: rotate(405deg) translateY(0px); }
+    100% { transform: rotate(0deg) translateY(-10px); }
+}
+@keyframes desactivatesMyBurgerBottomBar {
+    0% { transform: rotate(-225deg) translateY(0px); }
+    100% { transform: rotate(0deg) translateY(10px); }
+}
+// nav bar
+@keyframes activatesMyBurgerNavbar {    
+    20% { transform: rotate(-180deg); }
+    // 40% { transform: translateX(calc(#{$vioKBurger_BarWidth / 2})) 
+    //                  translateY(calc(#{$viokNavbar_posTop}))
+    //                  rotate(0deg);
+    //         width: $viokNavbar_width; 
+    //     }
+    // 45% { transform: translateX(calc(#{$vioKBurger_BarWidth / 2})) 
+    //                     translateY(calc(#{$viokNavbar_posTop} - #{$viokNavbar_ShakeAmplitude})) 
+    //                     rotate(0deg);
+    //         width: $viokNavbar_width;
+    //     }
+    // 50% { transform: translateX(calc(#{$vioKBurger_BarWidth / 2}))
+    //                  translateY(calc(#{$viokNavbar_posTop}))
+    //                  rotate(0deg);
+    //         width: $viokNavbar_width;    
+    //     }
+    50% { transform: translateX(calc(#{$vioKBurger_BarWidth / 2})) 
+                     translateY(calc(#{$viokNavbar_posTop} - #{$viokNavbar_ShakeAmplitude})) 
+                     rotate(0deg);
+            width: $viokNavbar_width;
+        }
+    60% { transform: translateX(calc(#{$vioKBurger_BarWidth / 2})) 
+                     translateY(calc(#{$viokNavbar_posTop})) 
+                     rotate(0deg);
+            width: $viokNavbar_width;
+        }
+    70% { transform: translateX(calc(#{$vioKBurger_BarWidth / 2})) 
+                     translateY(calc(#{$viokNavbar_posTop})) 
+                     rotate(0deg);
+            width: $viokNavbar_width;
+            height: 0;
+            border-width: $vioKBurger_BarHeight;
+            padding: 0;
+        }
+    100% { transform: translateX(calc(#{$vioKBurger_BarWidth / 2})) 
+                      translateY($viokNavbar_posTop) 
+                      rotate(0deg);
+            width: $viokNavbar_width; 
+            height: $viokNavbar_height;
+            border-width: 0;
+            padding: $viokNavbar_Padding;
+        }
+}
+@keyframes desactivatesMyBurgerNavbar {
+    0% { transform: translateX(calc(#{$vioKBurger_BarWidth / 2})) 
+                    translateY($viokNavbar_posTop) 
+                    rotate(0deg);
+            width: $viokNavbar_width; 
+            height: $viokNavbar_height;
+            // border-color: $vioKBurger_BackgroundColor;
+            border-width: 0;
+            padding: $viokNavbar_Padding;
+        }
+    30% { transform: translateX(calc(#{$vioKBurger_BarWidth / 2})) 
+                     translateY(calc(#{$viokNavbar_posTop})) 
+                     rotate(0deg);
+            width: $viokNavbar_width;
+            height: 0;
+            // border-color: $vioKBurger_BurgerColor;
+            border-width: $vioKBurger_BarHeight;
+            padding: 0;
+        }
+    40% { transform: translateX(calc(#{$vioKBurger_BarWidth / 2})) 
+                     translateY(calc(#{$viokNavbar_posTop})) 
+                     rotate(0deg);
+            width: $viokNavbar_width;
+            height: 0;
+            border-color: $vioKBurger_BurgerColor;
+        }
+    50% { transform: translateX(calc(#{$vioKBurger_BarWidth / 2})) 
+                     translateY(calc(#{$viokNavbar_posTop} - #{$viokNavbar_ShakeAmplitude})) 
+                     rotate(0deg);
+            width: $viokNavbar_width; 
+        }
+    // 60% { transform: translateX(calc(#{$vioKBurger_BarWidth / 2})) 
+    //                  translateY($viokNavbar_posTop)
+    //                  rotate(0deg);
+    //         width: $viokNavbar_width; 
+    //     }
+    80% { transform: rotate(-180deg); }
+    100% {}
+}
+
+
+
+// OK LET'S GO !
+// the burger
+#my-burger {
+    position: relative;
+    float: right;
+}
+#my-burger-btn-div {
+    position: absolute;
+    top: $vioKBurger_PosTop;
+    right: $vioKBurger_PosRight;
+    z-index: 2;
+}
+#my-burger-btn {
+    @include my-burger-btn();
+    opacity: 1;
+}
+// build the three bars 
+#my-burger-bar {
+    @include my-burger-bar();
+    &:before {
+        @include my-burger-bar();
+        content: '';
+        backface-visibility: hidden;
+        transform: translateY(10px);
+    }
+    &:after {
+        @include my-burger-bar();
+        content: '';
+        backface-visibility: hidden;
+        transform: translateY(-10px);
+    }
+}
+
+// the burger nav bar
+#my-burger-navbar {
+    position: absolute;
+    z-index: 1;
+    top: calc(#{$vioKBurger_PosTop} + #{$vioKBurger_BtnHeight / 2 } - #{$vioKBurger_BarHeight / 2} );
+    right: calc(#{$vioKBurger_PosRight} + #{$vioKBurger_BtnWidth / 2} - #{$vioKBurger_BarWidth / 2} );
+    width: $vioKBurger_BarWidth;
+    height: 0;
+    border-top: solid $vioKBurger_BurgerColor $vioKBurger_BarHeight;
+    border-radius: 2px;
+    background-color: $viokNavbar_BackgroundColor;
+    transition: $viokNavbar_AnimDuration;
+    // I want it to be upside down
+    transform: rotate(-180deg);
+    // for what is inside
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+
+    // navbar links
+    // @for $i from 1 through 5 {
+    //     .my-burger-navbar-item:nth-child(#{$i}) a {
+    //         display: none;
+    //         opacity: 0;
+    //     }
+    // }
+    .my-burger-navbar-item {
+        text-align: center;
+
+        a {
+            display: inline-block;
+            visibility: hidden;
+            text-decoration: none;
+            color: $viokNavbar_Color;
+            font-size: $viokNavbar_FontSize;
+            font-weight: $viokNavbar_FontWeight;
+
+            // animated link underline
+            .my-underline {
+                display: block;
+                border-top: 3px solid $viokNavbar_Color;
+                width: 0;
+                transition: width ease-in-out .4s;
+            }
+            &:hover .my-underline{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+
+// burger becomes active
+#my-burger-btn.my-burger-is-active {
+    &:hover {
+        box-shadow: 0px 0px 10px $vioKBurger_ActiveColor;
+    }
+}
+#my-burger-btn.my-burger-is-active #my-burger-bar {
+    animation-name: activatesMyBurgerMiddleBar;
+    animation-duration: $vioKBurger_BurgerAnimDuration;
+    animation-fill-mode: forwards;
+    &:before {
+        animation-name: activatesMyBurgerTopBar;
+        animation-duration: $vioKBurger_BurgerAnimDuration;
+        // this line forces éléments to keep their state at the end of animation
+        animation-fill-mode: forwards;
+    }
+    &:after {
+        animation-name: activatesMyBurgerBottomBar;
+        animation-duration: $vioKBurger_BurgerAnimDuration;
+        // this line forces éléments to keep their state at the end of animation
+        animation-fill-mode: forwards;
+    }
+}
+// the nav : now u see me
+#my-burger-navbar.my-burger-navbar-is-active {
+    animation-name: activatesMyBurgerNavbar;
+    animation-duration: $vioKBurger_BurgerAnimDuration;
+    animation-fill-mode: forwards;
+
+    @for $i from 1 through 5 {
+        .my-burger-navbar-item:nth-child(#{$i}) a {
+            visibility: visible;
+            transition: visibility calc(#{$viokNavbar_AnimDuration / 20});
+            transition-delay: calc( #{$viokNavbar_AnimDuration / 6} + ( ( #{$viokNavbar_AnimDuration / 17} ) * ( #{$i - 1} ) / 3 ) );
+        }
+    }
+}
+
+
+
+
+// burger becomes inactive
+#my-burger-btn.my-burger-is-inactive #my-burger-bar {
+    background-color: $vioKBurger_BackgroundColor;
+    &:before {
+        animation-name: desactivatesMyBurgerTopBar;
+        animation-duration: $vioKBurger_BurgerAnimDuration;
+        animation-fill-mode: forwards;
+    }
+    &:after {
+        animation-name: desactivatesMyBurgerBottomBar;
+        animation-duration: $vioKBurger_BurgerAnimDuration;
+        animation-fill-mode: forwards;
+    }
+}
+// the nav : now u don't
+#my-burger-navbar.my-burger-navbar-is-inactive {
+    @for $i from 5 through 1 {
+        .my-burger-navbar-item:nth-child(#{$i}) a {
+            visibility: hidden;
+            transition: visibility calc(#{$viokNavbar_AnimDuration} / 3 );
+            transition-delay: calc( (#{$viokNavbar_AnimDuration} / 17) * (#{$i} - 1) );
+        }
+    }
+    animation-name: desactivatesMyBurgerNavbar;
+    animation-duration: $vioKBurger_BurgerAnimDuration;
+    animation-fill-mode: forwards;
+
+}

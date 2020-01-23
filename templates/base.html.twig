@@ -35,9 +35,11 @@
         <!--<link rel="stylesheet" href="build/scss/bootstrap.min.css"> -->
         <!-- custom css -->
         {{ encore_entry_link_tags('mainCss') }}
+        {{ encore_entry_link_tags('backToTopButtonCss') }}
         <!-- for other particular css -->
         {% block css %}
         {% endblock %}        
+
 
         <!-- font was in ttf, we can find it in public/build/fonts -->
         <!-- <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" rel="stylesheet"> 
@@ -52,22 +54,60 @@
         </title>
     </head>
     <body>
-            <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
-                    <path
-                          class="line top"
-                          d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
-                    <path
-                          class="line middle"
-                          d="m 30,50 h 40" />
-                    <path
-                          class="line bottom"
-                          d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
-                </svg>
-        {% block content %}
+
+        <!-- my burger  -->
+        <div id="my-burger-btn-div">
+            <div id="my-burger-btn">
+                <div id="my-burger-bar"></div>
+            </div> 
+        </div>
+        <div id="my-burger-navbar">
+            {% block navbarContent %}
+            <div class="my-burger-navbar-item">
+                <a href="#home">Accueil<span class="my-underline"></span></a>
+            </div>
+            <div class="my-burger-navbar-item">
+                <a href="#about">À propos<span class="my-underline"></span></a>
+            </div>
+            <div class="my-burger-navbar-item">
+                <a href="#projects">Projets<span class="my-underline"></span></a>
+            </div>
+            <div class="my-burger-navbar-item">
+                <a href="#contact">Contact<span class="my-underline"></span></a>
+            </div>
+
+            <!--  <hr>  -->
+            <!-- customizable options buttons -->
+            <!-- main color -->
+<!--             <div>
+                   <input type="color" name="mainColorPicker" id="main-color-picker_input">
+                    <label for="mainColorPicker">  <input type="color" name="mainColorPicker" id="main-color-picker_input" >Modif le couleur</label>
+            </div> 
+-->
+<!--            <hr>
+            <div class="my-burger-navbar-item">
+                <a href="{{ path('app_login')}}">Connexion<span class="my-underline"></span></a>
+            </div>
+-->
+            {% endblock %}
+        </div>
+        
+
+        <!-- scroll to top button -->
+        <button id="backToTopButton" title="Haut de page"><span>^</span></button>
+
+
+
+
+        {% block body %}
         {% endblock %}
         
         
+        <!-- Scripts -->
         {{ encore_entry_script_tags('mainJs') }}
+        {{ encore_entry_script_tags('myBurgerJs') }}
+        {{ encore_entry_script_tags('backToTopButtonJS') }}
+
         {% block script %}
         {% endblock %}
     </body>
