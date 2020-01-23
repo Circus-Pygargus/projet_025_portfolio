@@ -21,7 +21,49 @@ body main section#home div.container div.row div h1, body main section#home div.
 
 @media screen and (max-width: 770px) {
   body main section#home div.container div.row div h1, body main section#home div.container div.row div h2 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body main section#home div.container div.row div h1, body main section#home div.container div.row div h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  body main section#home div.container div.row div h1, body main section#home div.container div.row div h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  body main section#home div.container div.row div h1, body main section#home div.container div.row div h2 {
     font-size: 2rem;
+  }
+}
+
+body main section#about .container .row {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 991px) {
+  body main section#about .container .row {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body main section#about .container .row {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body main section#about .container .row {
+    font-size: 1.5rem;
   }
 }
 

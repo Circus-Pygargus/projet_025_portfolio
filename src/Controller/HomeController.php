@@ -38,20 +38,21 @@ class HomeController extends AbstractController
             'image' => 'ririgram.jpg',
             'technos' => 'HTML, SCSS, JavaScript', 
             'link' => 'https://richardm.promo-28.codeur.online/ririgram/',
-            'gitLink' => '#',
+            'gitLink' => 'https://github.com/Circus-Pygargus/Ririgram_V1',
             'date' => 'octobre 2019'
         ];
-/*        $projects[2] = [
+ /*       $projects[2] = [
             'name' => 'Tourisme Handi',
             'nameID' => 'tourisme_handi',
             'description' => 'Une appli qui offre la possibilité de trouver des établissements liés au tourisme et estampillés Tourisme Handi par le gouvernement',
-            'image' => 'tourisme_handi.jpg',
+            'image' => 'portfolio.jpg',
             'technos' => 'HTML, CSS, JavaScript, PHP, MySQL, Architecture MVC', 
             'link' => '#',
             'gitLink' => 'https://github.com/Fenrir117/projetData/tree/Circus-Pygargus',
             'date' => 'mai 2019'
         ];
-        $projects[3] = [
+*/
+/*        $projects[3] = [
             'name' => 'Vynil',
             'nameID' => 'vynil',
             'description' => 'Un site WordPress sur les vyniles',
@@ -66,24 +67,24 @@ class HomeController extends AbstractController
             'name' => 'Blind Test',
             'nameID' => 'blind_test',
             'description' => 'Un jeu de blind test sur 2 écrans : un pour les joueurs, un pour le maître de jeu qui gère le départ des chansons, l\'affichage des images et l\'attribution des points.',
-            'nota_bene' => 'Ce site évoluera pour être jouable sur un seul écran et pourra également à terme être utilisé comme lecteur audio.',
+            'nota_bene' => 'Ce site évoluera pour être jouable sur un seul écran et pourra également à terme être utilisé comme lecteur audio. Pour une question évidente de droits d\'auteur, ce site n\'est pas disponible en ligne.',
             'image' => 'blind_test.jpg',
-            'technos' => 'HTML, Twig, SCSS, JavaScript, PHP, MySQL, Architecture MVC', 
+            'technos' => 'HTML, Twig, SCSS, JavaScript, PHP, MySQL, Architecture MVC, POO', 
             'link' => '#',
             'gitLink' => 'https://github.com/Circus-Pygargus/blind_Test',
             'date' => 'juillet 2019'
         ];
-/*        $projects[5] = [
+        $projects[5] = [
             'name' => 'Portfolio',
             'nameID' => 'portfolio',
             'description' => 'Le site sur lequel vous naviguez actuellement.',
             'image' => 'portfolio.jpg',
-            'technos' => 'HTML, Twig, SCSS, Bootstrap, JavaScript, PHP, MySQL, Symfony, Architecture MVC', 
+            'technos' => 'HTML, Twig, SCSS, Bootstrap, JavaScript, PHP, MySQL, Symfony, Architecture MVC, POO', 
             'link' => '#',
             'gitLink' => 'https://github.com/Circus-Pygargus/projet_025_portfolio',
             'date' => 'août 2019'
         ];
-*/
+
         $form = $this->buildContactForm($request);
 
         return $this->render(
