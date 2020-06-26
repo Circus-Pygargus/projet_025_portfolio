@@ -225,7 +225,7 @@ class __TwigTemplate_f6f7d8dc26c1074c2df9836cd838a867c7c9c8156130f1373d3d66f3b7b
                                             ";
             }
             // line 108
-            echo "                                            <p><b>Techos utilisées :</b> ";
+            echo "                                            <p><b>Technos utilisées :</b> ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["project"], "technos", [], "any", false, false, false, 108), "html", null, true);
             echo "</p>
                                         </div>
@@ -458,7 +458,7 @@ class __TwigTemplate_f6f7d8dc26c1074c2df9836cd838a867c7c9c8156130f1373d3d66f3b7b
                                             {% if project.nota_bene is defined %}
                                             <p><b>N.B. :</b> {{ project.nota_bene }}</p>
                                             {% endif %}
-                                            <p><b>Techos utilisées :</b> {{ project.technos }}</p>
+                                            <p><b>Technos utilisées :</b> {{ project.technos }}</p>
                                         </div>
                                         <div class=\"modal-footer\">
                                             {% if project.link != '#' %}

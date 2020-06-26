@@ -248,6 +248,10 @@ $viokNavbar_Color: #0f101b;
     // hide text if out of the box
     overflow: hidden;
 
+    @media screen and (max-width: 597px) {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
     // navbar links
     // @for $i from 1 through 5 {
     //     .my-burger-navbar-item:nth-child(#{$i}) a {
