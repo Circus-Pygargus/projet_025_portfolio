@@ -27,7 +27,7 @@ class HomeController extends AbstractController
             'description' => 'Exercice d\'intégration d\'après maquette',
             'image' => 'restaurant.jpg',
             'technos' => 'HTML, SCSS, JavaScript', 
-            'link' => 'https://richardm.promo-28.codeur.online/lambda/',
+            'link' => 'https://lambda-restaurant.richardmeuret.dev/',
             'gitLink' => 'https://github.com/Circus-Pygargus/ACS-projet-008',
             'date' => 'avril 2019'
         ];
@@ -35,9 +35,10 @@ class HomeController extends AbstractController
             'name' => 'Ririgram',
             'nameID' => 'ririgram',
             'description' => 'Un jeu de type picross',
+            'nota_bene' => 'Ce jeu a été créé à la suite d\'un pari et n\'est malheureusement pas optimisé pour mobile pour l\'instant. J\'ai prévu de le réécrire totalement en utilisant NodeJS, permettant ainsi d\'enregistrer en BDD les résultats des différents joueurs.',
             'image' => 'ririgram.jpg',
             'technos' => 'HTML, SCSS, JavaScript', 
-            'link' => 'https://richardm.promo-28.codeur.online/ririgram/',
+            'link' => 'https://ririgram.richardmeuret.dev/',
             'gitLink' => 'https://github.com/Circus-Pygargus/Ririgram_V1',
             'date' => 'octobre 2019'
         ];

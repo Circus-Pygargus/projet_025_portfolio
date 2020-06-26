@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["variablesCssJs"],{tlHC:function(e,n){document.documentElement.style.setProperty("--theme-color-main","#FFF000")}},[["tlHC","runtime"]]]);

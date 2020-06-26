@@ -1,0 +1,100 @@
+{
+  "entrypoints": {
+    "myBurgerHomeCss": {
+      "js": [
+        "/build/runtime.1103dde6.js"
+      ],
+      "css": [
+        "/build/myBurgerHomeCss.d57885fa.css"
+      ]
+    },
+    "mainJs": {
+      "js": [
+        "/build/runtime.1103dde6.js",
+        "/build/1.8ba2712b.js",
+        "/build/mainJs.0768effe.js"
+      ]
+    },
+    "contactJs": {
+      "js": [
+        "/build/runtime.1103dde6.js",
+        "/build/0.3cd9ce85.js",
+        "/build/contactJs.7c15b7c3.js"
+      ]
+    },
+    "backToTopButtonJS": {
+      "js": [
+        "/build/runtime.1103dde6.js",
+        "/build/backToTopButtonJS.5c781c82.js"
+      ]
+    },
+    "variablesCssJs": {
+      "js": [
+        "/build/runtime.1103dde6.js",
+        "/build/variablesCssJs.2539fe57.js"
+      ]
+    },
+    "mainCss": {
+      "js": [
+        "/build/runtime.1103dde6.js"
+      ],
+      "css": [
+        "/build/mainCss.d4685e83.css"
+      ]
+    },
+    "myBurgerJs": {
+      "js": [
+        "/build/runtime.1103dde6.js",
+        "/build/myBurgerJs.a06a05ef.js"
+      ]
+    },
+    "myBurgerConnectCss": {
+      "js": [
+        "/build/runtime.1103dde6.js"
+      ],
+      "css": [
+        "/build/myBurgerConnectCss.d4a93804.css"
+      ]
+    },
+    "myBurgerAdminCss": {
+      "js": [
+        "/build/runtime.1103dde6.js"
+      ],
+      "css": [
+        "/build/myBurgerAdminCss.1f7cc673.css"
+      ]
+    },
+    "backToTopButtonCss": {
+      "js": [
+        "/build/runtime.1103dde6.js"
+      ],
+      "css": [
+        "/build/backToTopButtonCss.72f9ec28.css"
+      ]
+    },
+    "myLoginCss": {
+      "js": [
+        "/build/runtime.1103dde6.js"
+      ],
+      "css": [
+        "/build/myLoginCss.930713ce.css"
+      ]
+    },
+    "homeCss": {
+      "js": [
+        "/build/runtime.1103dde6.js"
+      ],
+      "css": [
+        "/build/homeCss.51ecaab1.css"
+      ]
+    },
+    "connexionBtnCss": {
+      "js": [
+        "/build/runtime.1103dde6.js"
+      ],
+      "css": [
+        "/build/connexionBtnCss.cf48f903.css"
+      ]
+    }
+  }
+}
